@@ -1,0 +1,45 @@
+@import "../../styles/shared.scss";
+
+.wrapper {
+  margin: auto;
+  max-width: 1300px;
+  padding-top: 64px;
+}
+
+.header_wrapper {
+  background-color: var(--color-offwhite);
+  display: block;
+  padding: 1rem;
+
+  @include md {
+    @include flex;
+    padding: 2.5rem;
+  }
+}
+
+.title {
+  font-family: freight-display-pro, serif;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.25em;
+}
+
+.subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0.75rem;
+}
+
+.select {
+  border: 1px solid var(--color-lightgray);
+  cursor: pointer;
+  font-size: 14px;
+  height: 57px;
+  outline-color: var(--color-lightgray);
+  padding: 2px 32px 1px 20px;
+  width: 100%;
+
+  @include md {
+    width: 400px;
+  }
+}

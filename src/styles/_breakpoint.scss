@@ -1,0 +1,13 @@
+/**
+ * Breakpoint mixin
+ **/
+
+$screen-md-min: 768px;
+
+// Medium devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+

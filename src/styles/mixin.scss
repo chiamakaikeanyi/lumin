@@ -1,0 +1,9 @@
+@mixin flex {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  // Fallback for browsers that don't support flex
+  @supports not (display: flex) {
+    display: block;
+  }
+}

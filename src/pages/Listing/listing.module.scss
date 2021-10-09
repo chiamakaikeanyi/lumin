@@ -1,0 +1,82 @@
+@import "../../styles/shared.scss";
+
+.item {
+  text-align: center;
+
+  @include md {
+    padding: 3rem 2rem;
+  }
+
+  &_container {
+    background-color: var(--color-lightergray);
+    margin: auto;
+    max-width: 1300px;
+  }
+
+  &_wrapper {
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 10px;
+
+    @include md {
+      display: grid;
+      grid-gap: 35px;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0;
+    }
+  }
+
+  &_image {
+    background-size: cover;
+    max-height: 100px;
+    max-width: 50%;
+
+    @include md {
+      max-height: 170px;
+    }
+
+    &_wrapper {
+      aspect-ratio: 3/2;
+      min-height: 120px;
+
+      @include md {
+        min-height: 160px;
+      }
+    }
+  }
+
+  &_title {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  &_price {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+  }
+
+  &_btn {
+    background-color: #4b5548;
+    border: 0;
+    color: rgb(252, 252, 249);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    min-height: 52px;
+    outline: none;
+    width: 169px;
+
+    @include md {
+      width: 190px;
+    }
+
+    &:hover {
+      background-color: #2b2e2b;
+    }
+  }
+}
