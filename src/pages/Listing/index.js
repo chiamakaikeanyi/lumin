@@ -36,7 +36,12 @@ const Listing = ({ setShowCart }) => {
           <li key={product.id} className={styles.item}>
             <a href="/">
               <div className={styles.item_image_wrapper}>
-                <img src={product.image_url} alt={product.title} className={styles.item_image} />
+                <img
+                  src={product.image_url}
+                  alt={product.title}
+                  className={styles.item_image}
+                  loading="lazy"
+                />
               </div>
               <h2 className={styles.item_title}>{product.title}</h2>
             </a>
