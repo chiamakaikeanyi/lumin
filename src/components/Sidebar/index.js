@@ -33,19 +33,21 @@ const Sidebar = ({ showCart, setShowCart }) => {
         <h2 className={styles.sidebar_title}>Your Cart</h2>
       </div>
 
-      <label>
-        <select
-          className={styles.currency}
-          onChange={evt => updateCurrency(evt)}
-          defaultValue={currency || 'USD'}
-        >
-          {currencyList?.currency.map(item => (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          ))}
-        </select>
-      </label>
+      {currency && (
+        <label>
+          <select
+            className={styles.currency}
+            onChange={evt => updateCurrency(evt)}
+            defaultValue={currency}
+          >
+            {currencyList?.currency.map(item => (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
 
       {initialCart?.length === 0 ? (
         <p className={styles.emptyCart}>There are no items in your cart.</p>

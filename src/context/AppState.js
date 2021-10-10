@@ -7,7 +7,7 @@ const AppState = ({ children }) => {
   const [state, dispatch] = useReducer(rootReducer, {
     products: [],
     cart: [],
-    currency: 'USD'
+    currency: 'NGN'
   });
 
   const loadProducts = products => {

@@ -1,4 +1,5 @@
 export const API = 'https://pangaea-interviews.now.sh/api/graphql';
+export const CURRENCY_API = 'https://ipapi.co/currency/';
 
 export const NAV_ITEMS = [
   {
