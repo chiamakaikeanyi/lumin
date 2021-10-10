@@ -20,7 +20,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "stylelint": "stylelint src/components/**/*.scss && stylelint src/pages/**/*.scss",
-    "precommit": "yarn test --detectOpenHandles && lint-staged"
+    "precommit": "lint-staged"
   },
   "lint-staged": {
     "*.js": [
