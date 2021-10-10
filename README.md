@@ -2,6 +2,8 @@
 
 https://www.luminskin.com/products
 
+Data is fetched based on the user's location but can be updated by choosing a currency from the cart sidebar.
+
 ## Available Scripts
 
 In the project directory, you can run:
