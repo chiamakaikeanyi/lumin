@@ -10,16 +10,18 @@ const Hero = () => {
           <p className={styles.subtitle}>A 360° look at Lumin</p>
         </div>
         <div className={styles.select_wrapper}>
-          <select className={styles.select} defaultValue="">
-            <option disabled value="">
-              Filter by
-            </option>
-            {FILTER_OPTIONS.map(item => (
-              <option value={item} key={item}>
-                {item}
+          <label>
+            <select className={styles.select} defaultValue="">
+              <option disabled value="">
+                Filter by
               </option>
-            ))}
-          </select>
+              {FILTER_OPTIONS?.map(item => (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              ))}
+            </select>
+          </label>
         </div>
       </div>
     </section>

@@ -1,7 +1,9 @@
 import { useContext, useEffect, memo } from 'react';
 import { useQuery, NetworkStatus } from '@apollo/client';
 import { PRODUCT } from '../../lib/grapqlType';
+import axios from 'axios';
 import { AppContext } from '../../context';
+import { CURRENCY_API } from '../../lib/constants';
 import { formatPrice } from '../../lib/utils';
 import Button from '../../components/Button';
 import Loader from '../../components/Loader';
@@ -9,13 +11,23 @@ import styles from './listing.module.scss';
 
 const Listing = ({ setShowCart }) => {
   const context = useContext(AppContext);
-  const { currency, addProductToCart, loadProducts } = context;
+  const { currency, setCurrency, addProductToCart, loadProducts } = context;
 
   const { loading, data, networkStatus } = useQuery(PRODUCT, {
     variables: {
       currency: currency
     }
   });
+
+  useEffect(() => {
+    const getUserCurrency = async () => {
+      const { data: response } = await axios.get(CURRENCY_API);
+      setCurrency(response);
+    };
+
+    getUserCurrency();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     loadProducts(data?.products);
