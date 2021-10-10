@@ -1,4 +1,4 @@
-@import "../../styles/shared.scss";
+@import '../../styles/shared.scss';
 
 .item {
   text-align: center;
@@ -68,7 +68,7 @@
     font-weight: 600;
     line-height: 1.2;
     min-height: 52px;
-    outline: none;
+    outline-color: var(--color-gray);
     width: 169px;
 
     @include md {

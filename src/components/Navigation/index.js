@@ -17,7 +17,9 @@ export const Navigation = ({ setShowCart }) => {
     <header className={styles.header_wrapper}>
       <nav className={styles.nav_container}>
         <div className={styles.nav_wrapper}>
-          <img src={Logo} alt="Lumin Logo" className={styles.logo} />
+          <a href="/">
+            <img src={Logo} alt="Lumin Logo" className={styles.logo} />
+          </a>
           <ul className={styles.navitem_wrapper}>
             {NAV_ITEMS?.map(navItem => (
               <NavItem key={navItem.id} {...navItem} />

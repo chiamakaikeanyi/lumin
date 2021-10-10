@@ -1,4 +1,4 @@
-@import "../../styles/shared.scss";
+@import '../../styles/shared.scss';
 
 .sidebar {
   background-color: var(--color-asidegray);
@@ -117,17 +117,16 @@
 }
 
 .remove_product {
-  color: var(--color-black);
-  float: right;
-  font-size: 15px;
-  padding-right: 5px;
-  position: absolute;
-  right: 9px;
-  top: 6px;
-
   &_wrapper {
     background: transparent;
     border: none;
+    color: var(--color-black);
+    float: right;
+    font-size: 15px;
+    padding-right: 5px;
+    position: absolute;
+    right: 9px;
+    top: 6px;
   }
 }
 
@@ -149,7 +148,7 @@
   border: none;
   color: var(--color-black);
   font-size: 13px;
-  outline-color: transparent;
+  outline-color: transparent; // readonly mode
   padding: 0 10px;
   padding: 0;
   text-align: center;
