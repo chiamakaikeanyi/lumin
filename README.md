@@ -4,6 +4,9 @@ https://www.luminskin.com/products
 
 Data is fetched based on the user's location but can be updated by choosing a currency from the cart sidebar.
 
+
+![Lumin](https://github.com/chiamakaikeanyi/lumin/blob/main/src/images/lumin.png)
+
 ## Available Scripts
 
 In the project directory, you can run:
